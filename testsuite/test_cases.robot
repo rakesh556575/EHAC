@@ -8,7 +8,7 @@ ${password}  Rakesh123!
 ${login_url}  http://10.110.26.137:8080/ehac/UI/jsf/adminLogin.xhtml
 ${welcome_url}  http://10.110.26.137:8080/ehac/UI/jsf/home.xhtml
 
-${DELAY}  2
+
 
 
 *** Test Cases ***
