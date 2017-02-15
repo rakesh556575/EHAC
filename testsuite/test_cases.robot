@@ -24,3 +24,5 @@ ${welcome_url}  http://10.110.26.137:8080/ehac/UI/jsf/home.xhtml
   ${result} =  logout_test  ${login_url}  ${username}  ${password}
 
   Should be equal  ${result}   Pass
+
+| create_user

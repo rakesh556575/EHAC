@@ -45,3 +45,31 @@ def logout_test(login_url,username,password):
     else:
         driver.quit()
         return "Fail"
+
+
+
+
+def create_user(login_url,username,password,new_username,new_password):
+    driver = login(login_url, username, password)
+    time.sleep(5)
+    general_menu=driver.find_element(By.XPATH,"//*[@id='adminForm:adminMenu']/div[1]/h3/span")
+    general_menu.click()
+    user_menu=driver.find_element(By.XPATH,"//*[@id='adminForm:j_idt33']/span[1]")
+    user_menu.click()
+    user_add=driver.find_elemnt(By.XPATH,"//*[@id='form:userslist:addNewUser']")
+    user_add.clcik()
+    username_field=driver.find_element(By.XPATH,"//*[@id='adduser_form:userName']")
+    username_field.send_keys("Test")
+    full_user_name=driver.find_element(By.XPATH,"//*[@id='adduser_form:userFullName']")
+    full_user_name.send_keys("Test")
+    password_field=driver.find_element(By.XPATH,"//*[@id='adduser_form:userPassword']")
+    password_field.send_keys("Rakesh123!@")
+    confirm_passsword=driver.find_element(By.ID,"adduser_form:confirmUserPassword")
+    confirm_passsword.send_keys("Rakesh123!@")
+    create_user=driver.find_element(By.XPATH,"//*[@id='adduser_form:btn']")
+    create_user.click()
+
+
+
+
+
